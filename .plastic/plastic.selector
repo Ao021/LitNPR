@@ -1,0 +1,4 @@
+repository "NPR@dante_z@cloud.cn"
+  path "/"
+    br "/main"
+    co "/main"
