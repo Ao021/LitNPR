@@ -156,7 +156,7 @@ Varyings LitPassVertex(Attributes input)
     
     
     #ifdef _FACENORMAL
-        half3 SmoothNormal = normalize(input.positionOS - float3(0, _FaceCenterOffset,0));
+        half3 SmoothNormal = TransformObjectToWorld(normalize(input.positionOS - float3(0, _FaceCenterOffset,0)));
         output.normalWS = lerp( normalInput.normalWS, SmoothNormal,_FaceNormalRate);
     #else
         output.normalWS = normalInput.normalWS;
